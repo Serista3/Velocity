@@ -16,3 +16,9 @@ body {
   font-weight: 500;
   color: #090909;
   line-height: 1.65; }
+
+.changeColorTextWhite {
+  color: #f8fafc; }
+
+.changeColorTextGraydark {
+  color: #0a0a0a; }
