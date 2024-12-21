@@ -1,7 +1,28 @@
-.changeColorTextWhite {
+.change-color-text-white {
   color: $color-secondary-light;
 }
 
-.changeColorTextGraydark {
+.change-Color-text-Graydark {
   color: $color-tertiary-light;
+}
+
+.set-to-center {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.margin-btm-small {
+  margin-bottom: 2rem;
+}
+
+.margin-btm-medium {
+  margin-bottom: 4rem;
+}
+
+.margin-btm-large {
+  margin-bottom: 8rem;
+}
+
+.padding-horizontal {
+  padding: 10rem 0;
 }

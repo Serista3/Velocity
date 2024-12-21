@@ -1,0 +1,43 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-secondary-light;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  &__logo {
+    &-text {
+      color: $color-primary-light;
+      font-size: 3rem;
+      font-weight: 200;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.5rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    list-style: none;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-gray-1;
+      font-size: 1.6rem;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: $color-primary-dark;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@mixin headingFormat($lt, $fz) {
+  font-size: $fz;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: $lt;
+}

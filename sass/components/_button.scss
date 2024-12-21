@@ -1,0 +1,55 @@
+.btn {
+  border: none;
+  border-radius: 7px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  color: $color-secondary-light;
+  background-color: $color-tertiary-dark;
+  transition: all 0.3s;
+  box-shadow: 0 1rem 3rem rgba($color-tertiary-light, 0.15);
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  &:link,
+  &:visited {
+    display: inline-block;
+  }
+
+  &:active {
+    transform: scale(0.97);
+    box-shadow: 0 0.7rem 1.5rem rgba($color-tertiary-light, 0.2);
+  }
+}
+
+.group-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn--signup {
+  &:link,
+  &:visited {
+    border: 1px solid transparent;
+    background-color: $color-primary-light;
+  }
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+.btn--learnmore {
+  &:link,
+  &:visited {
+    border: 1px solid $color-secondary-light;
+    background-color: transparent;
+  }
+
+  &:hover {
+    background-color: $color-secondary-dark;
+    color: $color-tertiary-light;
+  }
+}
