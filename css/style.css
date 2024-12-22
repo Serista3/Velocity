@@ -26,7 +26,8 @@ html {
       font-size: 45%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: relative; }
 
 body {
   font-family: "Poppins", serif;
@@ -117,6 +118,42 @@ body {
     .padding-horizontal {
       padding: 7rem 0; } }
 
+.transform-to-right {
+  transform: translateX(0); }
+
+.bg-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #2563eb;
+  transform: translateX(200%);
+  transition: all 1s;
+  z-index: 1000; }
+  .bg-navigation__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }
+  .bg-navigation__link:link, .bg-navigation__link:visited {
+    display: inline-block;
+    padding: 1rem 3rem;
+    width: 100%;
+    color: #f8fafc;
+    font-size: 3.5rem;
+    text-decoration: none;
+    transition: all 0.3s; }
+  .bg-navigation__link:hover {
+    background-color: #f8fafc;
+    color: #3b82f6; }
+
 .btn {
   border: none;
   border-radius: 7px;
@@ -168,6 +205,25 @@ body {
   @media (max-width: 56.25em) {
     .btn--tab {
       padding: 1.5rem 2rem; } }
+
+.btn-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: #f8fafc;
+  font-size: 3rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 2px solid #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  cursor: pointer; }
+  .btn-close:hover {
+    background-color: #f8fafc;
+    color: #3b82f6; }
 
 .features {
   display: flex;
