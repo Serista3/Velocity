@@ -1,0 +1,66 @@
+.section-nav {
+  background-color: $color-secondary-light;
+}
+
+.section-intro {
+  text-align: center;
+  background-image: linear-gradient(
+      rgba($color-primary-light, 0.7),
+      rgba($color-primary-light, 0.7)
+    ),
+    url(https://images.unsplash.com/photo-1712159895341-ce9c3c39a55b?q=80&w=2077&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 5px solid $color-tertiary-dark;
+}
+
+.intro {
+  padding: 17rem 0;
+  &__descript {
+    font-size: 2.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: $color-secondary-light;
+  }
+}
+
+.section-do {
+  text-align: center;
+}
+
+.do {
+  &__header {
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    gap: 3rem;
+  }
+}
+
+.section-services {
+  color: $color-secondary-light;
+  background-color: $color-tertiary-light;
+  text-align: center;
+}
+
+.section-tab {
+  text-align: center;
+}
+
+.section-footer {
+  background-color: $color-gray-2;
+}
+
+.section-copyright {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 4rem 0;
+  background-color: $color-tertiary-light;
+  color: $color-secondary-light;
+}

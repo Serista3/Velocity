@@ -53,3 +53,11 @@
     color: $color-tertiary-light;
   }
 }
+
+.btn--tab {
+  padding: 2rem 3rem;
+  background-color: $color-gray-2;
+  &:first-child {
+    background-color: $color-primary-dark;
+  }
+}

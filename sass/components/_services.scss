@@ -1,0 +1,27 @@
+.services {
+  &__header {
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    &-img {
+    }
+
+    .btn--learnmore {
+      width: 48%;
+      margin: 0 auto;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
