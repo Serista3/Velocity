@@ -5,14 +5,30 @@
     justify-content: center;
     gap: 3rem;
     padding: 4rem 0;
+    @include responsive(tap-port) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__about {
     width: 33.33%;
+    @include responsive(tap-port) {
+      width: 70%;
+    }
+
+    .paragraph {
+      @include responsive(tap-port) {
+        padding: 0;
+      }
+    }
   }
 
   &__useful {
     width: 33.33%;
+    @include responsive(tap-port) {
+      width: 70%;
+    }
   }
 
   &__list {
@@ -56,5 +72,8 @@
 
   &__social {
     width: 33.33%;
+    @include responsive(tap-port) {
+      width: 70%;
+    }
   }
 }

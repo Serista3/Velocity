@@ -1,5 +1,8 @@
 .section-nav {
   background-color: $color-secondary-light;
+  @include responsive(tap-port) {
+    padding: 0 2rem;
+  }
 }
 
 .section-intro {
@@ -23,6 +26,9 @@
     text-transform: uppercase;
     letter-spacing: 0.4rem;
     color: $color-secondary-light;
+    @include responsive(tap-port) {
+      padding: 0 2rem;
+    }
   }
 }
 
@@ -39,6 +45,15 @@
     justify-content: center;
     // align-items: center;
     gap: 3rem;
+    @include responsive(tap-port) {
+      flex-direction: column;
+      max-width: 40%;
+      margin: 0 auto;
+    }
+
+    @include responsive(phone) {
+      max-width: 60%;
+    }
   }
 }
 
@@ -63,4 +78,8 @@
   padding: 4rem 0;
   background-color: $color-tertiary-light;
   color: $color-secondary-light;
+
+  @include responsive(tap-port) {
+    font-size: 1.4rem;
+  }
 }

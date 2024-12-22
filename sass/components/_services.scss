@@ -6,6 +6,10 @@
     display: flex;
     justify-content: center;
     gap: 6rem;
+
+    @include responsive(tap-port) {
+      flex-direction: column;
+    }
   }
 
   &__box {
@@ -16,12 +20,14 @@
     }
 
     .btn--learnmore {
-      width: 48%;
       margin: 0 auto;
     }
   }
 
   &__img {
     width: 100%;
+    @include responsive(tap-port) {
+      width: 70%;
+    }
   }
 }

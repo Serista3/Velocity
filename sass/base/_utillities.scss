@@ -17,10 +17,17 @@
 
 .margin-btm-medium-1 {
   margin-bottom: 4rem;
+
+  @include responsive(phone) {
+    margin-bottom: 2rem;
+  }
 }
 
 .margin-btm-medium-2 {
   margin-bottom: 6rem;
+  @include responsive(phone) {
+    margin-bottom: 4rem;
+  }
 }
 
 .margin-btm-large {
@@ -29,4 +36,12 @@
 
 .padding-horizontal {
   padding: 11rem 0;
+
+  @include responsive(tap-port) {
+    padding: 9rem 0;
+  }
+
+  @include responsive(phone) {
+    padding: 7rem 0;
+  }
 }

@@ -5,4 +5,25 @@
   border: 2px solid $color-primary-light;
   border-radius: 7px;
   padding: 2.5rem;
+
+  @include responsive(phone) {
+    gap: 1.25rem;
+  }
+  &__icon {
+    &-icon {
+      @include responsive(tap-port) {
+        width: 8rem;
+      }
+
+      @include responsive(phone) {
+        width: 7rem;
+      }
+    }
+  }
+
+  .paragraph {
+    @include responsive(tap-port) {
+      padding: 0;
+    }
+  }
 }

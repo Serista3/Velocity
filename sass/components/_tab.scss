@@ -5,17 +5,21 @@
   &__body {
     display: flex;
     flex-direction: column;
+    .group-btn {
+      @include responsive(phone) {
+        flex-direction: column;
+      }
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-
     &:not(:first-child) {
+      position: absolute;
+      top: 0;
+      left: 0;
       opacity: 0;
       visibility: hidden;
     }
@@ -23,13 +27,15 @@
 
   &__group-content {
     position: relative;
-    height: 80rem;
   }
 
   &__img {
     margin-top: 4rem;
     &--img {
       width: 100%;
+      @include responsive(tap-port) {
+        width: 80%;
+      }
     }
   }
 }

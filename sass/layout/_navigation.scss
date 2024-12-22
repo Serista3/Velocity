@@ -25,6 +25,23 @@
   }
 
   &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:last-child {
+      display: none;
+    }
+
+    @include responsive(tap-port) {
+      &:not(:last-child) {
+        display: none;
+      }
+
+      &:last-child {
+        display: inline-block;
+      }
+    }
   }
 
   &__link {
