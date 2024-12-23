@@ -2,6 +2,10 @@
   color: $color-secondary-light !important;
 }
 
+.change-Color-text-blue {
+  color: $color-primary-dark !important;
+}
+
 .change-Color-text-Graydark {
   color: $color-tertiary-light !important;
 }
@@ -67,4 +71,8 @@
 
 .change-backgroundColor-to-blue {
   background-color: $color-primary-dark !important;
+}
+
+.active-link {
+  background-color: $color-primary-dark;
 }

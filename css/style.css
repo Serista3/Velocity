@@ -92,6 +92,9 @@ body {
 .change-color-text-white {
   color: #f8fafc !important; }
 
+.change-Color-text-blue {
+  color: #2563eb !important; }
+
 .change-Color-text-Graydark {
   color: #0b0b0b !important; }
 
@@ -144,13 +147,17 @@ body {
 .change-backgroundColor-to-blue {
   background-color: #2563eb !important; }
 
+.active-link {
+  background-color: #2563eb; }
+
 .bg-navigation {
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100%;
-  background-color: #2563eb;
+  background-color: rgba(37, 99, 235, 0.4);
+  backdrop-filter: blur(2px);
   transform: translateX(200%);
   transition: all 0.8s;
   z-index: 1000; }

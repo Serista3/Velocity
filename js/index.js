@@ -63,7 +63,9 @@ const doBody = document.querySelector(".do__body");
 const servicesBody = document.querySelector(".services__body");
 const tabGroup = document.querySelector(".tab__group-content");
 const navMenu = document.querySelector(".nav__menu");
+const navLink = document.querySelectorAll(".nav__link");
 const bgNavigation = document.querySelector(".bg-navigation");
+const bgLink = document.querySelectorAll(".bg-navigation__link");
 const btnClose = document.querySelector(".btn-close");
 const groupBtn = document.querySelector(".tab__body .group-btn");
 const btnTab = document.querySelector(".btn--tab");
@@ -310,18 +312,6 @@ const insertElContentTab = function (parentEl) {
 
 ///////////////////////////////////////////////////////////////////////////
 
-// resetEventDefault
-const resetPreventDefault = function () {
-  const linkEl = document.querySelectorAll("a");
-  linkEl.forEach((e) => {
-    e.addEventListener("click", (ev) => {
-      ev.preventDefault();
-    });
-  });
-};
-
-///////////////////////////////////////////////////////////////////////////
-
 // Observe Section Do
 const handleObserve = function (entires) {
   entires.forEach((e) => {
@@ -344,6 +334,25 @@ const observeSectionDo = function () {
   observe.observe(sectionDo);
 };
 
+// Current Page
+const changeActiveLink = function (link, pathName, className) {
+  link.forEach((l) => {
+    const pathL = l.href.split("/").at(-1);
+    if (pathName === "") return;
+    if (pathL === pathName) {
+      l.classList.add(className);
+    } else {
+      l.classList.remove(className);
+    }
+  });
+};
+
+const checkCurPage = function () {
+  const pathName = window.location.pathname.split("/").at(-1);
+  changeActiveLink(navLink, pathName, "change-Color-text-blue");
+  changeActiveLink(bgLink, pathName, "active-link");
+};
+
 ///////////////////////////////////////////////////////////////////////////
 
 // Intitial State
@@ -352,6 +361,8 @@ const intitialState = function () {
   features = document.querySelectorAll(".features");
   tabContent[0].classList.add("active");
   btnTab.classList.add("change-backgroundColor-to-blue");
+  navLink[0].classList.add("change-Color-text-blue");
+  bgLink[0].classList.add("active-link");
 };
 
 ///////////////////////////////////////////////////////////////////////////
@@ -360,9 +371,9 @@ const intitialState = function () {
 const startProgram = function () {
   createAllEl();
   intitialState();
-  resetPreventDefault();
   addEventListenerToElement();
   observeSectionDo();
+  checkCurPage();
 };
 
 startProgram();
