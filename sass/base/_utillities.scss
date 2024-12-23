@@ -1,51 +1,70 @@
 .change-color-text-white {
-  color: $color-secondary-light;
+  color: $color-secondary-light !important;
 }
 
 .change-Color-text-Graydark {
-  color: $color-tertiary-light;
+  color: $color-tertiary-light !important;
 }
 
 .set-to-center {
-  max-width: 90rem;
-  margin: 0 auto;
+  max-width: 90rem !important;
+  margin: 0 auto !important;
 }
 
 .margin-btm-small {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 
 .margin-btm-medium-1 {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 
   @include responsive(phone) {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem !important;
   }
 }
 
 .margin-btm-medium-2 {
-  margin-bottom: 6rem;
+  margin-bottom: 6rem !important;
   @include responsive(phone) {
-    margin-bottom: 4rem;
+    margin-bottom: 4rem !important;
   }
 }
 
 .margin-btm-large {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 
 .padding-horizontal {
-  padding: 11rem 0;
+  padding: 11rem 0 !important;
 
   @include responsive(tap-port) {
-    padding: 9rem 0;
+    padding: 9rem 0 !important;
   }
 
   @include responsive(phone) {
-    padding: 7rem 0;
+    padding: 7rem 0 !important;
   }
 }
 
 .transform-to-right {
-  transform: translateX(0);
+  transform: translateX(0) !important;
+}
+
+.transform-to-left {
+  transform: translateX(200%) !important;
+}
+
+.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.show-content {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(0) !important;
+}
+
+.change-backgroundColor-to-blue {
+  background-color: $color-primary-dark !important;
 }

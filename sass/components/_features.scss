@@ -5,18 +5,23 @@
   border: 2px solid $color-primary-light;
   border-radius: 7px;
   padding: 2.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(5rem);
+  transition: all 0.3s;
 
   @include responsive(phone) {
     gap: 1.25rem;
   }
   &__icon {
     &-icon {
+      width: 7rem;
       @include responsive(tap-port) {
-        width: 8rem;
+        width: 6rem;
       }
 
       @include responsive(phone) {
-        width: 7rem;
+        width: 5rem;
       }
     }
   }

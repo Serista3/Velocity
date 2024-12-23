@@ -62,9 +62,6 @@
 .btn--tab {
   padding: 2rem 3rem;
   background-color: $color-gray-2;
-  &:first-child {
-    background-color: $color-primary-dark;
-  }
 
   @include responsive(tap-port) {
     padding: 1.5rem 2rem;

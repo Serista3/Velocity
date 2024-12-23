@@ -1,0 +1,10 @@
+@keyframes tranasformToTop {
+  from {
+    transform: translateY(7rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
