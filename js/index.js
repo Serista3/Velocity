@@ -1,60 +1,5 @@
-///////////////////////////////////////////////////////////////////////////
-
-// Information from API (assume)
-const doData = [
-  {
-    topic: "Graphic Design",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-    iconFile: "watch.svg",
-  },
-  {
-    topic: "Awesome code",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-    iconFile: "arrows-in-simple.svg",
-  },
-  {
-    topic: "free template",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-    iconFile: "tray.svg",
-  },
-];
-const servicesData = [
-  {
-    topic: "SERVICES one",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.",
-    imgFile: "img-services-1.jpeg",
-  },
-  {
-    topic: "SERVICES two",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.",
-    imgFile: "img-services-2.jpeg",
-  },
-];
-const tabData = [
-  {
-    topic: "Heading",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere",
-    imgFile: "img-tab-1.jpeg",
-  },
-  {
-    topic: "Heading",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere",
-    imgFile: "img-tab-2.jpeg",
-  },
-  {
-    topic: "Heading",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere",
-    imgFile: "img-tab-3.jpeg",
-  },
-];
+import * as data from "../js/data.js";
+import * as reuse from "../js/reuse.js";
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -62,27 +7,11 @@ const tabData = [
 const doBody = document.querySelector(".do__body");
 const servicesBody = document.querySelector(".services__body");
 const tabGroup = document.querySelector(".tab__group-content");
-const navMenu = document.querySelector(".nav__menu");
-const navLink = document.querySelectorAll(".nav__link");
-const bgNavigation = document.querySelector(".bg-navigation");
-const bgLink = document.querySelectorAll(".bg-navigation__link");
-const btnClose = document.querySelector(".btn-close");
 const groupBtn = document.querySelector(".tab__body .group-btn");
 const btnTab = document.querySelector(".btn--tab");
 const sectionDo = document.querySelector(".section-do");
 let tabContent;
 let features;
-
-///////////////////////////////////////////////////////////////////////////
-
-// Handle Event Navbar
-const handleOpenMenu = function () {
-  bgNavigation.classList.add("transform-to-right");
-};
-
-const handleCloseMenu = function () {
-  bgNavigation.classList.remove("transform-to-right");
-};
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -121,8 +50,6 @@ const handleChangeTab = function (e) {
 
 // AddEventListener
 const addEventListenerToElement = function () {
-  navMenu.addEventListener("click", handleOpenMenu);
-  btnClose.addEventListener("click", handleCloseMenu);
   groupBtn.addEventListener("click", handleChangeTab);
 };
 
@@ -184,7 +111,7 @@ const createElDo = function (parentEl) {
 };
 
 const insertElContentDo = function (parentEl) {
-  doData.forEach((d) => {
+  data.doData.forEach((d) => {
     const objectContent = createElDo(parentEl);
     objectContent.featuresIcon_icon.src = `../icon/${d.iconFile}`;
     objectContent.heading3.textContent = `${d.topic}`;
@@ -248,7 +175,7 @@ const createElServices = function (parentEl) {
 };
 
 const insertElContentServices = function (parentEl) {
-  servicesData.forEach((s) => {
+  data.servicesData.forEach((s) => {
     const objectContent = createElServices(parentEl);
     objectContent.servicesImg.src = `../img/${s.imgFile}`;
     objectContent.heading3.textContent = `${s.topic}`;
@@ -301,7 +228,7 @@ const createElTab = function (parentEl) {
 };
 
 const insertElContentTab = function (parentEl) {
-  tabData.forEach((t, index) => {
+  data.tabData.forEach((t, index) => {
     const objectContent = createElTab(parentEl);
     objectContent.tabImg_img.src = `../img/${t.imgFile}`;
     objectContent.tabContent.setAttribute("data-value", `${index + 1}`);
@@ -334,25 +261,6 @@ const observeSectionDo = function () {
   observe.observe(sectionDo);
 };
 
-// Current Page
-const changeActiveLink = function (link, pathName, className) {
-  link.forEach((l) => {
-    const pathL = l.href.split("/").at(-1);
-    if (pathName === "") return;
-    if (pathL === pathName) {
-      l.classList.add(className);
-    } else {
-      l.classList.remove(className);
-    }
-  });
-};
-
-const checkCurPage = function () {
-  const pathName = window.location.pathname.split("/").at(-1);
-  changeActiveLink(navLink, pathName, "change-Color-text-blue");
-  changeActiveLink(bgLink, pathName, "active-link");
-};
-
 ///////////////////////////////////////////////////////////////////////////
 
 // Intitial State
@@ -361,19 +269,18 @@ const intitialState = function () {
   features = document.querySelectorAll(".features");
   tabContent[0].classList.add("active");
   btnTab.classList.add("change-backgroundColor-to-blue");
-  navLink[0].classList.add("change-Color-text-blue");
-  bgLink[0].classList.add("active-link");
+  reuse.navLink[0].classList.add("change-Color-text-blue");
+  reuse.bgLink[0].classList.add("active-link");
 };
 
 ///////////////////////////////////////////////////////////////////////////
 
 // Start Program
-const startProgram = function () {
+export const startProgram = function () {
   createAllEl();
   intitialState();
   addEventListenerToElement();
   observeSectionDo();
-  checkCurPage();
 };
 
 startProgram();
