@@ -1,0 +1,48 @@
+.form {
+  &__header {
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    @include responsive(tap-port) {
+      padding: 0 2rem;
+    }
+  }
+
+  &__input {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    border-radius: 7px;
+    border: 1px solid rgba($color-gray-1, 0.4);
+    &:focus {
+      outline: none;
+    }
+
+    &:last-child {
+      background-color: $color-primary-light;
+      color: $color-secondary-light;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: $color-primary-dark;
+      }
+    }
+  }
+
+  &__textarea {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    height: 15rem;
+    border-radius: 7px;
+    border: 1px solid rgba($color-gray-1, 0.4);
+    &:focus {
+      outline: none;
+    }
+  }
+}

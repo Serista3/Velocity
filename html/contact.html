@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script defer src="../js/reuse.js" type="module"></script>
     <script defer src="../js/contact.js" type="module"></script>
     <title>Contact</title>
@@ -47,6 +58,51 @@
           </li>
         </ul>
       </nav>
+    </section>
+    <section class="section-map">
+      <div class="map" id="map"></div>
+    </section>
+    <section class="section-form padding-horizontal">
+      <div class="form set-to-center">
+        <div class="form__header margin-btm-medium-2">
+          <h2 class="heading-secondary">Contact Us Today</h2>
+          <p class="heading-addit">This is some text inside of a div block.</p>
+        </div>
+        <p class="paragraph">
+          Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+          commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus
+          id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+        </p>
+        <form action="#" class="form__content">
+          <input
+            type="text"
+            id="name"
+            class="form__input"
+            placeholder="Enter your name..."
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            class="form__input"
+            placeholder="Enter your email..."
+            required
+          />
+          <textarea
+            name=""
+            id=""
+            id="textarea"
+            class="form__textarea"
+            placeholder="Message"
+            required
+          ></textarea>
+          <input
+            type="submit"
+            value="send carrier pigeon"
+            class="form__input"
+          />
+        </form>
+      </div>
     </section>
     <section class="section-footer">
       <div class="footer set-to-center">
