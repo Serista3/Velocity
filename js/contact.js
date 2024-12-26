@@ -44,10 +44,7 @@ const creatMap = function (lat, longi) {
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
 
-  L.marker([lat, longi])
-    .addTo(map)
-    .bindPopup("London is beautiful city.")
-    .openPopup();
+  L.marker([lat, longi]).addTo(map).bindPopup("ํYou are here!!").openPopup();
 
   var popup = L.popup();
 
