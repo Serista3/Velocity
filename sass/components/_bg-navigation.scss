@@ -4,8 +4,8 @@
   left: 0;
   height: 100vh;
   width: 100%;
-  background-color: rgba($color-primary-dark, 0.4);
-  backdrop-filter: blur(2px);
+  background-color: $color-primary-light;
+  // backdrop-filter: blur(2px);
   transform: translateX(200%);
   transition: all 0.8s;
   z-index: 1000;
