@@ -159,7 +159,7 @@ body {
   background-color: #3b82f6;
   transform: translateX(200%);
   transition: all 0.8s;
-  z-index: 1000; }
+  z-index: 100000000; }
   .bg-navigation__list {
     position: absolute;
     top: 50%;
